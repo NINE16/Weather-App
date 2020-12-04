@@ -1,0 +1,97 @@
+.container {
+  margin: 100px 200px;
+  padding: 70px 30px 30px 70px;
+  background-image: linear-gradient(45deg, #ee9ca7 0%, #ffdde1 100%);
+  border-radius: 100px;
+  box-shadow: 5px 5px 15px #790c5a;
+}
+body {
+  background-color: #fceef5;
+}
+h1 {
+  color: #790c5a;
+}
+form {
+  position: absolute;
+  top: 130px;
+  left: 600px;
+}
+h4 {
+  font-size: 18px;
+}
+#yourcity {
+  border-radius: 15px;
+  border-color: black;
+}
+.btn-primary {
+  background-color: #790c5a;
+  border-radius: 15px;
+  border-color: #f1d4d4;
+  margin-right: 15px;
+}
+.btn-primary:hover {
+  background-color: #e6739f;
+  border-color: #790c5a;
+}
+.Currentplace {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #790c5a;
+}
+.details {
+  text-align: left;
+  padding-top: 45px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 20px;
+}
+#details2 {
+  color: #394867;
+}
+.ul {
+  display: block;
+  padding-left: 100px;
+}
+#forecast {
+  padding: 20px;
+  color: #394867;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 20px;
+}
+.w-100 {
+  padding: 15px;
+}
+#subtitleforecast {
+  margin-left: 60px;
+  margin-top: 20px;
+  color: #790c5a;
+}
+h1,
+h3 {
+  font-family: "Merriweather", serif;
+}
+#now {
+  color: #968c83;
+  font-size: 40px;
+}
+.temperature {
+  font-size: 40px;
+}
+.fa-cloud-showers-heavy {
+  color: #2d6187;
+}
+.fa-cloud-sun {
+  color: #ff9642;
+}
+.fa-smog {
+  color: #968c83;
+}
+.fa-cloud {
+  color: #968c83;
+}
+.nowDetails {
+  display: inline;
+}
+#temp-now {
+  display: inline;
+  list-style: none;
+}

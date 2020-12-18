@@ -92,7 +92,6 @@ let findLocation = `https://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=
 axios.get(findLocation).then(currentCity);
 }
 function currentCity(response){
-  console.log(response);
   let currentTemp = Math.round(response.data.list[0].main.temp);
   let humid = Math.round(response.data.list[0].main.humidity);
   let wind = response.data.list[0].wind.speed;
@@ -100,7 +99,8 @@ function currentCity(response){
   let max = Math.round(response.data.list[0].main.temp_max);
   let descrip = response.data.list[0].weather[0].description;
   let cityName = response.data.list[0].name;
-  
+ let icon = document.querySelector("#icon");
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[0].weather[0].icon}@2x.png`);
 
   let degrees = document.querySelector("#current-temp");
   degrees.innerHTML = `${currentTemp}`;

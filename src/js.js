@@ -31,7 +31,6 @@ celsius.addEventListener("click", changetoCelsius);
 farenheit.addEventListener("click", changetoFarenheit);
 
 function showTemp(response){
-  console.log(response.data);
   let currentTemp = Math.round(response.data.main.temp);
   let humid = Math.round(response.data.main.humidity);
   let wind = response.data.wind.speed;
@@ -60,6 +59,9 @@ function showTemp(response){
 
   let description = document.querySelector("#details");
   description.innerHTML = `${descrip}`;
+
+  let icon = document.querySelector("#icon");
+  icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 newCity.addEventListener("click", updateDetails);
@@ -98,6 +100,7 @@ function currentCity(response){
   let max = Math.round(response.data.list[0].main.temp_max);
   let descrip = response.data.list[0].weather[0].description;
   let cityName = response.data.list[0].name;
+  
 
   let degrees = document.querySelector("#current-temp");
   degrees.innerHTML = `${currentTemp}`;

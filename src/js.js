@@ -31,13 +31,15 @@ celsius.addEventListener("click", changetoCelsius);
 farenheit.addEventListener("click", changetoFarenheit);
 
 function showTemp(response){
-  let currentTemp = Math.round(response.data.main.temp);
+  let currentTemp = Math.round(celsiusTemperature);
   let humid = Math.round(response.data.main.humidity);
   let wind = response.data.wind.speed;
   let min = Math.round(response.data.main.temp_min);
   let max = Math.round(response.data.main.temp_max);
   let descrip = response.data.weather[0].description;
   let cityName = response.data.name;
+
+  celsiusTemperature = response.data.main.temp;
 
   let city = document.querySelector("#my-city")
   city.innerHTML =`${cityName}`
@@ -71,7 +73,7 @@ function search(city){
 let temperature = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(temperature).then(showTemp);
 }
-search("Geneva");
+
 
 function updateDetails(){
 let searchResult = document.querySelector("#yourcity");
@@ -126,3 +128,17 @@ function currentCity(response){
 let currentButton = document.querySelector("#current");
 currentButton.addEventListener("click", update);
 
+
+function showFarenheit(event){
+  event.preventDefault();
+  let farenheitTemp = (celsiusTemperature * 9)/ 5 + 32;
+let temperture = document.querySelector("#current-temp")
+temperture.innerHTML = Math.round(farenheitTemp)
+}
+
+let celsiusTemperature = null;
+
+let farenheitLink = document.querySelector("#farenheit-degrees");
+farenheitLink.addEventListener("click", showFarenheit)
+
+search("Geneva");

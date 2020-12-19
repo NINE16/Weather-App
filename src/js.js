@@ -17,18 +17,6 @@ let minutes = now.getMinutes();
 let currentDate = document.querySelector("#current-time")
 currentDate.innerHTML = `${day}, ${hour}:${minutes}`;
 
-let degrees = document.querySelector("#current-temp");
-let farenheit = document.querySelector("#farenheit-degrees");
-let celsius = document.querySelector("#Celsius-degrees");
-
-function changetoCelsius(){
-degrees.innerHTML = `10`}
-
-function changetoFarenheit(){
-degrees.innerHTML = `66`
-}
-celsius.addEventListener("click", changetoCelsius);
-farenheit.addEventListener("click", changetoFarenheit);
 
 function showTemp(response){
   let currentTemp = Math.round(celsiusTemperature);
@@ -94,15 +82,17 @@ let findLocation = `https://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=
 axios.get(findLocation).then(currentCity);
 }
 function currentCity(response){
-  let currentTemp = Math.round(response.data.list[0].main.temp);
+  let currentTemp = Math.round(celsiusTemperature);
   let humid = Math.round(response.data.list[0].main.humidity);
   let wind = response.data.list[0].wind.speed;
   let min = Math.round(response.data.list[0].main.temp_min);
   let max = Math.round(response.data.list[0].main.temp_max);
   let descrip = response.data.list[0].weather[0].description;
   let cityName = response.data.list[0].name;
- let icon = document.querySelector("#icon");
+  let icon = document.querySelector("#icon");
   icon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[0].weather[0].icon}@2x.png`);
+
+  celsiusTemperature = response.data.list[0].main.temp;
 
   let degrees = document.querySelector("#current-temp");
   degrees.innerHTML = `${currentTemp}`;
@@ -125,20 +115,30 @@ function currentCity(response){
   let name = document.querySelector("#my-city")
   name.innerHTML = `${cityName}`
 }
+
 let currentButton = document.querySelector("#current");
 currentButton.addEventListener("click", update);
 
 
 function showFarenheit(event){
   event.preventDefault();
+  let temperture = document.querySelector("#current-temp")
   let farenheitTemp = (celsiusTemperature * 9)/ 5 + 32;
-let temperture = document.querySelector("#current-temp")
-temperture.innerHTML = Math.round(farenheitTemp)
+  temperture.innerHTML = Math.round(farenheitTemp);
+}
+
+function showCelsius(event){
+  event.preventDefault();
+  let temperature = document.querySelector("#current-temp")
+  temperature.innerHTML = Math.round(celsiusTemperature);
 }
 
 let celsiusTemperature = null;
 
 let farenheitLink = document.querySelector("#farenheit-degrees");
 farenheitLink.addEventListener("click", showFarenheit)
+
+let celsiusLink = document.querySelector("#Celsius-degrees");
+celsiusLink.addEventListener("click", showCelsius);
 
 search("Geneva");

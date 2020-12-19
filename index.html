@@ -27,7 +27,6 @@
             <button type="submit" class="btn btn-primary mb-2" id="current">Current Place</button>
 
         </form>
-        <section class="currentDetails">
             <div class="row">
                 <div class="col-4">
                     <h1 id="my-city"></h1>
@@ -37,49 +36,39 @@
             </div>
             <div class="Currentplace">
                 <div class="row" id="today">
+                    <div class="col-6">
                     <h3 class="Current">Current Weather</h3> 
                     <img src="" alt="" id="icon" />
                     <h3 class="temperature" id="current-temp"> </h3>
                     <a href="#" id="Celsius-degrees"> °C </a> |
                     <a href="#" id="farenheit-degrees"> °F </a>
                 </div>
-            </div>
-        </section>
+        </div>
         <section class="details">
-            <div class="row" id="details2">
-                <div class="col-2">Wind: <strong id="wind"> </strong></div>
-                <div class="col-2">Humidity: <strong id="humid"> </strong></div>
-                <div class="w-100"></div>
-                <div class="col-2">Min temp: <strong id="min"> </strong></div>
-                <div class="col-2">Max temp: <strong id="max"> </strong></div>
+                <div class="col-6">
+                <ul>
+                    <li>
+Wind: <strong id="wind"> </strong>
+                    </li>
+                    <li>
+Humidity: <strong id="humid"> </strong>
+                    </li>
+                    <li>
+                    Min temp: <strong id="min"> </strong>
+                    </li>
+                    <li>
+Max temp: <strong id="max"> </strong>
+                    </li>
+                </ul>
+                </div>
+
             </div>
         </section>
-        <span id="subtitleforecast">
-            <div class="col-4">
-                <section class="nextdays">
-                    <h3>Forecast</h3>
-            </div>
-        </span>
-           
-            <div class="row" id="subtitleforecast">
-                <div class="col-4 ">Tomorrow</div>
-                <div class="col-4 "> <i class="fas fa-smog"> </i> <strong> 10°C</strong> 7°C </div>
-                <div class="w-100"></div>
-                <div class="col-4">Sunday</div>
-                <div class="col-4"> <i class="fas fa-cloud-showers-heavy"></i> <strong> 14°C</strong>/ 6°C</div>
-                <div class="w-100"></div>
-                <div class="col-4">Monday</div>
-                <div class="col-4"> <i class="fas fa-cloud-sun"></i><strong> 14°C</strong>/ 5°C</div>
-                <div class="w-100"></div>
-                <div class="col-4">Tuesday</div>
-                <div class="col-4"> <i class="fas fa-cloud"></i><strong> 14°C</strong>/ 6°C</div>
-                <div class="w-100"></div>
-                <div class="col-4">Wednesday</div>
-                <div class="col-4"> <i class="fas fa-cloud-sun"></i><strong> 13°C</strong>/ 6°C</div>
-            </div>
-     
+        <div class="row weather forecast" id="forecast">
+</div>
             </section>
         </div>    
+    </div>
     </div>
         <small id="opensource">
             <a href="https://github.com/NINE16/Weather-App" target="_blank">Open-source code</a> by Nicole Nemeth

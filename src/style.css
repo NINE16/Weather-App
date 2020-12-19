@@ -20,6 +20,24 @@ form {
 h4 {
   font-size: 18px;
 }
+div {
+  display: block;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
 #yourcity {
   border-radius: 15px;
   border-color: black;
@@ -41,32 +59,18 @@ h4 {
 }
 .details {
   text-align: left;
-  padding-top: 45px;
   font-family: "Fira Sans", sans-serif;
   font-size: 20px;
-}
-#details2 {
-  color: #394867;
-}
-.ul {
-  display: block;
-  padding-left: 100px;
 }
 #forecast {
-  padding: 20px;
+  padding: 20px 0;
   color: #394867;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 20px;
+  font-size: 14px;
+  font-weight: 400;
 }
+
 .w-100 {
   padding: 15px;
-}
-#subtitleforecast {
-  position: relative;
-  margin-left: 60px;
-  margin-top: 20px;
-  color: #790c5a;
-  left: -20px;
 }
 h1,
 h3 {
@@ -78,25 +82,6 @@ h3 {
 }
 .temperature {
   font-size: 40px;
-}
-.fa-cloud-showers-heavy {
-  color: #2d6187;
-}
-.fa-cloud-sun {
-  color: #ff9642;
-}
-.fa-smog {
-  color: #968c83;
-}
-.fa-cloud {
-  color: #968c83;
-}
-.nowDetails {
-  display: inline;
-}
-#temp-now {
-  display: inline;
-  list-style: none;
 }
 #opensource {
   margin-left: 250px;

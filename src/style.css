@@ -15,7 +15,7 @@ h1 {
 form {
   position: absolute;
   top: 130px;
-  left: 600px;
+  left: 630px;
 }
 h4 {
   font-size: 18px;
@@ -55,10 +55,9 @@ li {
 }
 .details {
   font-family: "Fira Sans", sans-serif;
-  font-size: 20px;
 }
 #forecast {
-  padding: 20px 0;
+  padding-bottom: 20px;
   color: #394867;
   font-size: 14px;
   font-weight: 400;
@@ -67,9 +66,9 @@ h1,
 h3 {
   font-family: "Merriweather", serif;
 }
-#now {
-  color: #968c83;
-  font-size: 40px;
+#my-city {
+  color: #790c5a;
+  font-size: 30px;
 }
 .temperature {
   font-size: 40px;
@@ -94,4 +93,20 @@ h3 {
 #opensource {
   margin-left: 250px;
   padding: 15px;
+}
+.col-6 {
+  max-width: 55%;
+}
+.units {
+  position: relative;
+  top: -90px;
+  left: 160px;
+}
+.active {
+  color: rgb(66, 27, 45);
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+  color: rgb(66, 27, 45);
 }

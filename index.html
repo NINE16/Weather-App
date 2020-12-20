@@ -21,7 +21,7 @@
             </div>
             <div class="form-group mx-sm-3 mb-2">
                 <label for="inputPassword2" class="sr-only">Password</label>
-                <input type="text" class="form-control" id="yourcity" placeholder="Search your city">
+                <input type="text" class="form-control" id="yourcity" placeholder="Search your city" autocomplete="off">
             </div>
             <button type="submit" class="btn btn-primary mb-2">Search</button>
             <button type="submit" class="btn btn-primary mb-2" id="current">Current Place</button>
@@ -39,9 +39,12 @@
                     <div class="col-6">
                     <h3 class="Current">Current Weather</h3> 
                     <img src="" alt="" id="icon" />
+                    <span class="temperature" id="current-temp"></span>
                     <h3 class="temperature" id="current-temp"> </h3>
-                    <a href="#" id="Celsius-degrees"> °C </a> |
+                    <span class="units">
+                    <a href="#" id="Celsius-degrees" class="active"> °C </a> |
                     <a href="#" id="farenheit-degrees"> °F </a>
+                    </span>
                 </div>
         <section class="details">
                 <div class="col-6">

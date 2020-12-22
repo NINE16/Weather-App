@@ -142,7 +142,7 @@ let lon = position.coords.longitude;
 let findLocation = `https://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 axios.get(findLocation).then(currentCity);
 
-apiURL =` https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+apiURL =`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 axios.get(apiURL).then(displayForecastHere);
 }
 function currentCity(response){
